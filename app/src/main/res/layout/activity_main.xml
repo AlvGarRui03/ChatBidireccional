@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_layouts"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TxtInput_IP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="IP"
+        tools:ignore="MissingConstraints">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nombre"
+        tools:ignore="MissingConstraints">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/EditText_Nombre"
+        android:layout_width="335dp"
+        android:layout_height="48dp"
+        android:background="@drawable/elementos_redondeados"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/editText_IP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TxtInput_IP"
+        app:layout_constraintVertical_bias="0.676"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editText_IP"
+        android:layout_width="339dp"
+        android:layout_height="48dp"
+        android:background="@drawable/elementos_redondeados"
+        android:hint="IP"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TxV_Encabezado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Servicio de Mensajería"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/EditText_Nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TxtInput_IP"
+        app:layout_constraintVertical_bias="0.289" />
+
+    <Button
+        android:id="@+id/Bt_EstablecerConexion"
+        android:layout_width="137dp"
+        android:layout_height="122dp"
+        android:background="@drawable/boton_inicio"
+        android:onClick="crearSocket"
+        android:text="Conectar"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_IP" />
+
+    <TextView
+        android:id="@+id/view_Ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bt_EstablecerConexion" />
+
+    <TextView
+        android:id="@+id/TxT_notificarConexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/Bt_EstablecerConexion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.834" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
